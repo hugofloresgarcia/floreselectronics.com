@@ -33,6 +33,10 @@ with Daniel Flores García and Jarrett Thompson
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/786787825&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/hugofloresgarcia" title="hugo flores-garcía" target="_blank" style="color: #cccccc; text-decoration: none;">hugo flores-garcía</a> · <a href="https://soundcloud.com/hugofloresgarcia/cant-help-but-feel-alone" title="can&#x27;t help but feel alone" target="_blank" style="color: #cccccc; text-decoration: none;">can&#x27;t help but feel alone</a></div>
 
+### Hot Garbage (2019)
+with BullMoose (playing guitar 2)
+<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=172279724/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://tinybanshee.bandcamp.com/album/hot-garbage">Hot Garbage by BullMoose</a></iframe>
+
 ### Mary Jane (2019)
 with Hip-Oh and Cyril Durant.
 <iframe src="https://www.youtube.com/embed/_Gd8PbdFR-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
