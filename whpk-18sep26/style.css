@@ -1,0 +1,157 @@
+/* hugo @ whpk — unlisted // wip
+   same dress as aguante-tacuazin (no-style-please):
+   white paper, black monospace, ///// dividers, yellow as the one accent. */
+
+html, body { background: white; }
+
+body {
+  color: black;
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0;
+  min-height: 100dvh;
+  overflow-wrap: break-word;
+}
+
+.wrap {
+  min-height: 100dvh;
+  box-sizing: border-box;
+  padding: 1.4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.1rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- title + transport ---- */
+
+.deck {
+  width: min(92vw, 700px);
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+h1 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.sub {
+  margin: 0.15rem 0 1.1rem;
+}
+
+.transport {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+#play {
+  font-family: inherit;
+  background: white;
+  color: black;
+  border: thin solid black;
+  padding: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#play svg {
+  width: 0.95rem;
+  height: 0.95rem;
+  fill: black;
+}
+
+/* svg ignores the html `hidden` attribute, so state is a class on the button */
+#play #ic-pause { display: none; }
+#play.playing #ic-play { display: none; }
+#play.playing #ic-pause { display: block; }
+
+#play:hover,
+#play:focus-visible {
+  background: yellow;
+  outline: none;
+}
+
+.time {
+  font-variant-numeric: tabular-nums;
+  min-width: 3.1rem;
+  font-size: 0.9rem;
+}
+
+#cur { text-align: right; }
+#dur { text-align: left; }
+
+/* seek: garden-colored waveform (canvas) with an invisible range on top
+   so keyboard + screen readers still get a real slider */
+
+.wave {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  height: 56px;
+}
+
+#wavecv {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#seek {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.wave:focus-within {
+  outline: 2px solid black;
+  outline-offset: 4px;
+}
+
+.hint {
+  opacity: 0.5;
+  font-size: 0.8rem;
+  margin: 1.1rem 0 0;
+}
+
+.noscript {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ---- garden canvas: floats over everything, never blocks clicks ---- */
+
+#garden canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* short landscape screens (phones sideways): keep controls visible */
+@media (max-height: 480px) {
+  .sub { margin-bottom: 0.5rem; }
+  .hint { display: none; }
+}
