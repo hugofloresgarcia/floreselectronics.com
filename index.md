@@ -61,6 +61,7 @@ You can reach them
 <div class="fun-divider"></div>
 <div style="text-align: center;">
   <p> to find out where I'm musicking next, have a look at my <a href="https://instagram.com/hugofloresgarcia">instagram!</a></p>
+  <p> to listen to my music, visit <a href="https://music.hugofloresgarcia.art">music.hugofloresgarcia.art</a> 🎶</p>
 </div>
 
 {% comment %} news section hidden for now — remove these comment tags to restore {% endcomment %}
