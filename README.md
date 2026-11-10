@@ -16,7 +16,7 @@ bundle install
 bundle exec jekyll serve --livereload     # → http://localhost:4000
 ```
 
-pushing to `main` deploys the site. no build workflow needed — GitHub Pages builds jekyll itself.
+pushing to `main` deploys the site via `.github/workflows/pages.yml` (jekyll build + pages deploy with a longer timeout, since the site is ~250 MB).
 
 ## where things are
 
