@@ -4,7 +4,14 @@ title: flores electronics # name of the site
 url: https://floreselectronics.com # root address of the site
 baseurl: "" # subpath of the site, e.g. "/blog" (leave it blank "" if you're site shouldn't use a subpath)
 description: > # description of the site (multiple lines allowed)
-  music 🤝 computers
+  instruments, pedals and synth design by hugo and daniel flores garcía
+
+# landing-page taglines (the page shows one language at a time, see _layouts/home.html)
+tagline_en: "instruments 🕹️ pedals 🎛️ synths 🎹 — a family operation"
+tagline_es: "instrumentos 🕹️ pedales 🎛️ sintetizadores 🎹 — un taller familiar"
+
+# TODO: swap for the flores electronics address once it exists (gmail or hola@floreselectronics.com via porkbun forwarding)
+contact_email: mail@hugofloresgarcia.art
 
 
 permalink: /:slug.html
@@ -27,7 +34,7 @@ defaults:
 
 theme_config:
   appearance: "light" # can be "light", "dark" or "auto"
-  back_home_text: "back home? 🌻" # customize text for homepage link in post layout
+  back_home_text: "← flores electronics" # customize text for homepage link in post layout
   date_format: "%Y-%m-%d" # customize how date is formatted
   show_description: false # show blog description in home page
 

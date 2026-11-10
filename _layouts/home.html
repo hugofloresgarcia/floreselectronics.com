@@ -1,228 +1,58 @@
 ---
 layout: default
 ---
+<style>
+  .fe-header { text-align: center; }
+  .fe-header h1 { margin-bottom: 0.2rem; }
+  .fe-tagline { margin-top: 0; }
+  .lang-switch { text-align: center; font-size: 0.85em; margin-top: 0.4rem; }
+  .lang-switch a[aria-current="true"] { font-weight: bold; text-decoration: none; }
+  /* once JS picks a language, hide the other one (no JS → both languages show) */
+  html.lang-en [lang="es"], html.lang-es [lang="en"] { display: none; }
+  .fe-links { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 2rem 0; }
+  .fe-links a { display: block; padding: 1.2rem 1.6rem; border: thin solid black; font-size: 1.3em; text-align: center; min-width: 12rem; }
+  .fe-photos { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin: 1.5rem 0; }
+  .fe-photos figure { margin: 0; width: 100%; max-width: 320px; }
+  .fe-photos img { width: 100%; height: auto; }
+  .fe-photos figcaption { font-size: 0.8em; text-align: center; }
+  .fe-placeholder { border: thin dashed black; padding: 2.5rem 1rem; text-align: center; opacity: 0.6; }
+</style>
 
-<header>
+<header class="fe-header">
   <h1>{{ site.title }}</h1>
-  {%- if site.theme_config.show_description -%}
-    <p>{{ site.description }}</p>
-  {%- endif -%}
+  <p class="fe-tagline" lang="en">{{ site.tagline_en }}</p>
+  <p class="fe-tagline" lang="es">{{ site.tagline_es }}</p>
+  <p class="lang-switch">
+    <a href="#" data-lang="en" hreflang="en">english</a> · <a href="#" data-lang="es" hreflang="es">español</a>
+  </p>
 </header>
-
-<head>
-  <style>
-    img {
-      width: 100%; /* Set to 100% of the container width */
-      max-width: 350px; /* Set the maximum width of the image */
-      height: auto; /* Maintain the aspect ratio */
-      margin-bottom: 5px; /* Add space between the image and audio widget */
-      }
-
-    /* contact tab: a tidy reveal of the email */
-    .contact-reveal summary {
-      cursor: pointer;
-      list-style: none;
-      color: LinkText;          /* match the default link color of the other tabs */
-      text-decoration: underline;
-    }
-    .contact-reveal summary::-webkit-details-marker { display: none; }
-    .contact-reveal summary::marker { content: ""; }
-    .contact-email {
-      display: inline-block;
-      margin-top: 0.35rem;
-    }
-    .contact-reveal[open] .contact-email {
-      animation: contact-bloom 0.45s ease both;
-    }
-    @keyframes contact-bloom {
-      from { opacity: 0; transform: translateY(-4px) scale(0.95); }
-      to   { opacity: 1; transform: none; }
-    }
-
-    /* navbar links orbiting the spinning flower (positions set by JS) */
-    .flower-nav {
-      position: relative;
-      width: 100%;
-      max-width: 640px;
-      height: 560px;
-      margin: 1rem auto 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .fn-flower {
-      width: 34%;
-      max-width: 210px;
-      aspect-ratio: 1 / 1;
-      margin: 0;
-      pointer-events: none; /* decorative — taps go to the links */
-    }
-    .fn-flower canvas { display: block; }
-    .fn-item {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); /* JS overrides with the orbital offset */
-      white-space: nowrap;
-      text-align: center;
-      will-change: transform;
-    }
-    .fn-caption {
-      display: block;
-      text-align: center;
-      font-size: 0.8em;
-      max-width: 460px;
-      margin: 1.6rem auto 0;
-    }
-
-    /* mobile: a rectangular garden patch of flowers, links scattered over it */
-    @media (max-width: 640px) {
-      .flower-nav {
-        height: 480px;
-      }
-      .fn-flower {
-        position: absolute;
-        inset: 0;
-        width: auto;
-        max-width: none;
-        aspect-ratio: auto;  /* fill the rectangle as the garden canvas */
-        z-index: 0;
-      }
-      .fn-item { z-index: 1; } /* links above the garden, still interactive */
-    }
-  </style>
-</head>
-
-<div class="flower-nav">
-  <a class="fn-item" href="/art/improvised-music">improvised music 🌀</a>
-  <a class="fn-item" href="/art/neural">with neural nets 🧠</a>
-  <a class="fn-item" href="/art/web-sketches">web sketches 🕸️</a>
-  <a class="fn-item" href="/art/live-coding">live coding 💻</a>
-
-  <div class="fn-flower" id="bouquet" aria-hidden="true"></div>
-
-  <a class="fn-item" href="/aguante-tacuazin/">¡aguante tacuazín! 🦝</a>
-  <a class="fn-item" href="/art/tunes">tunes 🎶</a>
-  <a class="fn-item" href="/instruments">instruments 🕹️</a>
-  <a class="fn-item" href="/pedals">pedals 🎛️</a>
-  <a class="fn-item" href="https://scholar.google.com.ph/citations?user=CZ39htEAAAAJ">publications 📚</a>
-  <a class="fn-item" href="/assets/cv.pdf">cv 🧑🏾‍🎓</a>
-  <div class="fn-item">
-    <details class="contact-reveal">
-      <summary>contact 📫</summary>
-      <a class="contact-email" href="mailto:mail@hugofloresgarcia.art">🌻 mail@hugofloresgarcia.art 🌻</a>
-    </details>
-  </div>
-</div>
-
-<script>
-(function () {
-  var nav = document.querySelector('.flower-nav');
-  if (!nav) return;
-  var flower = nav.querySelector('.fn-flower');
-  var items = Array.prototype.slice.call(nav.querySelectorAll('.fn-item'));
-  var n = items.length;
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // per-link gentle sway (leaf in a breeze); baseX/baseY set by place()
-  var data = items.map(function () {
-    return {
-      baseX: 0, baseY: 0,
-      phase: Math.random() * Math.PI * 2,
-      speed: 0.0007 + Math.random() * 0.0005,  // slow breeze
-      ampX: 9 + Math.random() * 9,             // mostly side to side
-      ampY: 3 + Math.random() * 4,
-      tilt: 2 + Math.random() * 3
-    };
-  });
-
-  function isGarden() {
-    return window.matchMedia && window.matchMedia('(max-width: 640px)').matches;
-  }
-
-  // scatter links, rejecting positions that would overlap another link.
-  // desktop: a ring around the center flower. mobile: spread across the garden.
-  function place() {
-    var r = nav.getBoundingClientRect();
-    var garden = isGarden();
-    var foot = items.map(function (el, i) {
-      return {
-        hw: el.offsetWidth / 2 + data[i].ampX + 6,
-        hh: el.offsetHeight / 2 + data[i].ampY + 6
-      };
-    });
-    var R = 10, rMin = 0;
-    if (!garden) {
-      var maxHW = 0, maxHH = 0;
-      foot.forEach(function (f) { if (f.hw > maxHW) maxHW = f.hw; if (f.hh > maxHH) maxHH = f.hh; });
-      var fr = (flower ? flower.offsetWidth : 0) / 2;
-      R = Math.max(10, Math.min(r.width / 2 - maxHW, r.height / 2 - maxHH));
-      rMin = Math.max(0, Math.min(fr + 16, R - 1));
-    }
-
-    var placed = [];
-    for (var i = 0; i < n; i++) {
-      var best = null, bestScore = -Infinity;
-      for (var k = 0; k < 180; k++) {
-        var bx, by;
-        if (garden) {
-          bx = (Math.random() - 0.5) * Math.max(0, r.width - 2 * foot[i].hw);
-          by = (Math.random() - 0.5) * Math.max(0, r.height - 2 * foot[i].hh);
-        } else {
-          var ang = Math.random() * Math.PI * 2;
-          var rad = rMin + Math.random() * (R - rMin);
-          bx = rad * Math.cos(ang);
-          by = rad * Math.sin(ang);
-        }
-        var worst = Infinity;
-        for (var j = 0; j < placed.length; j++) {
-          var pj = placed[j];
-          var sepX = Math.abs(bx - pj.bx) - (foot[i].hw + foot[pj.i].hw);
-          var sepY = Math.abs(by - pj.by) - (foot[i].hh + foot[pj.i].hh);
-          var sep = Math.max(sepX, sepY); // >= 0 means the boxes don't overlap
-          if (sep < worst) worst = sep;
-        }
-        if (worst > bestScore) { bestScore = worst; best = { bx: bx, by: by }; }
-        if (worst >= 0) break; // found a non-overlapping spot
-      }
-      data[i].baseX = best.bx;
-      data[i].baseY = best.by;
-      placed.push({ i: i, bx: best.bx, by: best.by });
-    }
-  }
-
-  function frame(now) {
-    for (var i = 0; i < n; i++) {
-      var d = data[i];
-      var s = reduce ? 0 : Math.sin(now * d.speed + d.phase);
-      var s2 = reduce ? 0 : Math.sin(now * d.speed * 0.6 + d.phase);
-      var x = (d.baseX + s * d.ampX).toFixed(1);
-      var y = (d.baseY + s2 * d.ampY).toFixed(1);
-      var rot = (s * d.tilt).toFixed(2);
-      items[i].style.transform =
-        'translate(calc(-50% + ' + x + 'px), calc(-50% + ' + y + 'px)) rotate(' + rot + 'deg)';
-    }
-    if (!reduce) requestAnimationFrame(frame);
-  }
-
-  place();
-  var lastW = window.innerWidth;
-  window.addEventListener('resize', function () {
-    // ignore height-only resizes (mobile address bar show/hide on scroll)
-    if (window.innerWidth === lastW) return;
-    lastW = window.innerWidth;
-    place();
-  });
-  if (reduce) frame(0); else requestAnimationFrame(frame);
-})();
-</script>
-
-<script src="/assets/js/bouquet.js"></script>
 
 {{ content }}
 
-  
-
-<div id="wormhole"></div>
-
-<script src="/wormhole.js"></script>
+<script>
+(function () {
+  var root = document.documentElement;
+  var links = document.querySelectorAll('.lang-switch a');
+  function pick() {
+    try { var s = localStorage.getItem('fe-lang'); if (s === 'en' || s === 'es') return s; } catch (e) {}
+    return (navigator.language || '').toLowerCase().indexOf('es') === 0 ? 'es' : 'en';
+  }
+  function apply(l) {
+    root.classList.remove('lang-en', 'lang-es');
+    root.classList.add('lang-' + l);
+    root.setAttribute('lang', l);
+    for (var i = 0; i < links.length; i++) {
+      links[i].setAttribute('aria-current', links[i].getAttribute('data-lang') === l ? 'true' : 'false');
+    }
+  }
+  apply(pick());
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function (e) {
+      e.preventDefault();
+      var l = this.getAttribute('data-lang');
+      try { localStorage.setItem('fe-lang', l); } catch (e2) {}
+      apply(l);
+    });
+  }
+})();
+</script>

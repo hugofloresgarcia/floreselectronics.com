@@ -3,6 +3,8 @@ layout: page
 title: instruments
 ---
 
+<p><em>instruments and software designed and built by flores electronics 🕹️ · instrumentos y software diseñados y construidos por flores electronics</em></p>
+
 # hardware
 
 <div class="fun-divider"></div>
@@ -11,7 +13,7 @@ title: instruments
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/boNo2F2Ta4Q?si=x7uhA3fk4JShQel3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-my most hellish creation yet, the chivo dub is a supernatural dub siren made for [cabeza de chivo](https://cabezadechivo.com). 
+our most hellish creation yet, the chivo dub is a supernatural dub siren made for [cabeza de chivo](https://cabezadechivo.com). 
 
 - it's implemented on an electrosmith daisy, and features a single oscillator with a pitch modulating oscillator over it, along with a delay and filter. 
 - it's capable of breaking the pitch barrier both ways, from making clicky pulsing velcro sounds at ~8Hz all the way to R2D2-style FM wails. 
@@ -41,7 +43,7 @@ The cloudchoir is half theremin // half four-part choir. With one hand, you can 
 ## pedalboy (2020)
 
 <img src="/assets/img/interfaces/pedalboy.png" alt="pedalboy pedalboard UI" width=500px>
-Pedalboy was my last assignment in undergrad, and it was a lot of fun to make. I made it for [Dr. John Thompson's](www.timebent.com) SuperCollider class. Pedalboy is a SuperCollider pedalboard with lots of lfos, lower-level controls, and midi support. Look at the code [here](https://github.com/hugofloresgarcia/pedalboy). 
+Pedalboy was hugo's last assignment in undergrad, and it was a lot of fun to make. He made it for [Dr. John Thompson's](https://www.timebent.com) SuperCollider class. Pedalboy is a SuperCollider pedalboard with lots of lfos, lower-level controls, and midi support. Look at the code [here](https://github.com/hugofloresgarcia/pedalboy). 
 
 <div class="fun-divider"></div>
 
@@ -86,7 +88,7 @@ to see download and install instructions, [open the github page!](https://github
     <img src="assets/img/interfaces/cleat_panner.png" alt="photo of the cleat panner interface" style="width: 200px; max-width: 200px; height: auto;">
   </div>
   <div style="flex:1;" markdown="1">
-the CLEAT panner is an auto spatialization tool designed for the 16-channel CLEAT system at [elastic arts](https://cleat.info) and other spatial audio formats (quad, 8-channel, etc.). it is included as a part of text2sound4all. It is currently written in C++. I would love to make a standalone plugin for it, if this is of interest to you please reach out!
+the CLEAT panner is an auto spatialization tool designed for the 16-channel CLEAT system at [elastic arts](https://cleat.info) and other spatial audio formats (quad, 8-channel, etc.). it is included as a part of text2sound4all. It is currently written in C++. we would love to make a standalone plugin for it — if this is of interest to you, please reach out!
 
 **onset triggers** (`o`)
 make your sound move only during transients. the onset tracker will look for sound onsets of your audio and can trigger spatial movements or path changes based on onset detection.
@@ -111,7 +113,7 @@ unsound objects premiered on March 14th, 2025 at the [CLEAT series](https://clea
 
 unsound objects was also accepted into the music program for the ICMC 2025 conference in Boston, USA! see you there!
 
-you can watch the _music video_ for unsound objects in the [art section](/art/neural#unsound-objects-2025).
+you can watch the _music video_ for unsound objects in the [art section of hugo's site](https://hugofloresgarcia.art/art/neural#unsound-objects-2025).
 
 <div class="fun-divider"></div>
 
@@ -119,7 +121,7 @@ you can watch the _music video_ for unsound objects in the [art section](/art/ne
 
 <img src="/assets/img/interfaces/unloop.png" width="100%" alt="photo of the unloop interface" >
 
-`unloop` is the musical interface that accompanies [VampNet](/research), which is a generative model for music I published at ISMIR 2023. `unloop` is a looper that uses generative modeling to **not** repeat itself. `unloop` can generate variations of loop a musician has recorded, creating a more interactive and fun experience than using a traditional looper. `unloop` is [open source](https://github.com/hugofloresgarcia/unloop), and has a [demo video](https://www.notion.so/hugo-does-things/unloop-a-looper-that-doesn-t-repeat-itself-a32a2bcadb264a82abf235d44c48a225)
+`unloop` is the musical interface that accompanies [VampNet](https://github.com/hugofloresgarcia/vampnet), which is a generative model for music I published at ISMIR 2023. `unloop` is a looper that uses generative modeling to **not** repeat itself. `unloop` can generate variations of loop a musician has recorded, creating a more interactive and fun experience than using a traditional looper. `unloop` is [open source](https://github.com/hugofloresgarcia/unloop), and has a [demo video](https://www.notion.so/hugo-does-things/unloop-a-looper-that-doesn-t-repeat-itself-a32a2bcadb264a82abf235d44c48a225)
 
 <div class="fun-divider"></div>
 
@@ -127,6 +129,6 @@ you can watch the _music video_ for unsound objects in the [art section](/art/ne
 
 <blockquote class="twitter-tweet" data-media-max-width="560"><p lang="en" dir="ltr">here’s nesquik 🌰🐿️👾 <br><br>use it to transform turn any instrumental music into an NES-style chip tune! <a href="https://t.co/T15ern3KQf">pic.twitter.com/T15ern3KQf</a></p>&mdash; hugo flores garcía 🌻 (@hugggof) <a href="https://twitter.com/hugggof/status/1738200151460577463?ref_src=twsrc%5Etfw">December 22, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-`nesquik` 🌰🐿️👾 is a [vampnet](/research)-based audio effect that will transform any instrumental music audio into an "8-bit", NES-style [chiptune](https://en.wikipedia.org/wiki/Chiptune). It's a fun tool that lets you listen to your favorite song in the style of an 80's video game! 
+`nesquik` 🌰🐿️👾 is a [vampnet](https://github.com/hugofloresgarcia/vampnet)-based audio effect that will transform any instrumental music audio into an "8-bit", NES-style [chiptune](https://en.wikipedia.org/wiki/Chiptune). It's a fun tool that lets you listen to your favorite song in the style of an 80's video game! 
 
 You can try nesquik on hugginface spaces by following [this](https://huggingface.co/spaces/hugggof/nesquik) link. 

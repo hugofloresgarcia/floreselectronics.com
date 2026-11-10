@@ -22,15 +22,18 @@ pushing to `main` deploys the site via `.github/workflows/pages.yml` (jekyll bui
 
 | what | where |
 |---|---|
-| homepage (the flower nav) | `index.md` + `_layouts/home.html` |
-| site title, url, theme options | `_config.yml` |
-| pedals page | `pedals.md`, per-pedal pages in `flores-electronics/` |
+| landing page (bio · instruments/pedals links · contact · family links; en/es toggle) | `index.md` + `_layouts/home.html` |
+| site title, taglines (en/es), contact email, theme options | `_config.yml` |
+| pedals page | `pedals.md`; per-pedal pages `cenote.md`, `se-trabo-esta-mierda.md`, `chivodub.md` |
 | instruments page | `instruments.md` |
 | images, cv, downloads | `assets/` |
 | custom domain | `CNAME` (don't delete — Pages reads it) |
 
-pages the new site probably doesn't need and can be deleted: `art.md` + `art/`, `research.md`,
-`defense*.md`, `thesis.pdf`, `epk/`, `aguante-tacuazin/`, `sketches/`, `whpk-18sep26/`, `_posts/`.
+hugo's personal-only pages (art, research, thesis, epk, sketches, posts, …) were pruned on 2026-11-10;
+they're in git history and on the `upstream` remote if ever needed.
+
+**todo before the cards go out:** real bio in `index.md` (en + es, hugo is writing it), a photo or two of
+hugo & daniel, a flores electronics contact email in `_config.yml`, daniel's own site link in `index.md`.
 
 ---
 

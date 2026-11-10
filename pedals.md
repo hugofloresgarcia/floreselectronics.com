@@ -3,13 +3,15 @@ layout: page
 title: pedals
 ---
 
+<p><em>effects pedals designed and built by flores electronics 🎛️ · pedales de efectos diseñados y construidos por flores electronics</em></p>
+
 <div class="fun-divider"></div>
 
 ## cenote (2025) <a name="cenote"></a>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1MCsX0o-sJQ?si=PvQuT-XTy_WjuQyP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-watch a demo video and check out the code [here!!!!](/flores-electronics/cenote)
+watch a demo video and check out the code [here!!!!](/cenote)
 
 `cenote` is a frequency-shifting chorus/delay and vibrato pedal. It combines a delay with a frequency shifter and a vibrato effect, allowing you to create swirling, spiraling sounds that can be used in a variety of musical contexts.
 
@@ -35,9 +37,9 @@ watch a demo video and check out the code [here!!!!](/flores-electronics/cenote)
 
 <iframe  src="https://www.youtube.com/embed/QYNr1rekdE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-my humble reimplementation of the cwo effect from the teenage engineering OP-1 for Max/MSP. 
+our humble reimplementation of the cwo effect from the teenage engineering OP-1 for Max/MSP. 
 
-I use it as part of my guitar setup, running freely available as a max patch! :)
+hugo uses it as part of his guitar setup. it's freely available as a max patch! :)
 
 [click here](/assets/vaca.zip) to download!!! 
 
@@ -46,14 +48,13 @@ I use it as part of my guitar setup, running freely available as a max patch! :)
 ## pedalboy (2020)
 
 <img src="/assets/img/interfaces/pedalboy.png" alt="pedalboy pedalboard UI" width=500px>
-Pedalboy was my last assignment in undergrad, and it was a lot of fun to make. I made it for [Dr. John Thompson's](www.timebent.com) SuperCollider class. Pedalboy is a SuperCollider pedalboard with lots of lfos, lower-level controls, and midi support. Look at the code [here](https://github.com/hugofloresgarcia/pedalboy). 
+Pedalboy was hugo's last assignment in undergrad, and it was a lot of fun to make. He made it for [Dr. John Thompson's](https://www.timebent.com) SuperCollider class. Pedalboy is a SuperCollider pedalboard with lots of lfos, lower-level controls, and midi support. Look at the code [here](https://github.com/hugofloresgarcia/pedalboy). 
 
 <div class="fun-divider"></div>
 
 ## fuzzy cosmic barn owl (2019)
 
 <img src="/assets/img/interfaces/fuzzybarnowl-front.jpeg">
-<!-- <img src="/assets/img/interfaces/fuzzybarnowl-back.png>"> -->
 
 The fuzzy cosmic barn owl is a guitar pedal that boasts an LM386 power amp distortion with an additional analog octave up circuit.
 
