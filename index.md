@@ -4,21 +4,16 @@ layout: home
 
 <div class="fun-divider"></div>
 
-<!-- TODO(hugo): replace both placeholder bios (en + es) with the real one. -->
 <section lang="en" markdown="1">
 ## who we are
 
-flores electronics is a family operation: brothers hugo and daniel flores garcía design and build musical instruments, effects pedals and synthesizers.
-
-*full bio coming soon.*
+flores electronics is a family operation: brothers hugo and daniel flores garcía design and build musical instruments, effects pedals and synthesizers. they grew up in tegucigalpa, honduras. their work sits between digital lutherie and play: how they make music shapes what they build, and what they build informs how they make music. today they're both based in the united states, hugo in san francisco and daniel in new york city, collaborating over weekly family facetimes.
 </section>
 
 <section lang="es" markdown="1">
 ## quiénes somos
 
-flores electronics es un taller familiar: los hermanos hugo y daniel flores garcía diseñan y construyen instrumentos musicales, pedales de efectos y sintetizadores.
-
-*bio completa muy pronto.*
+flores electronics es un taller familiar: los hermanos hugo y daniel flores garcía se dedican a diseñar y construir instrumentos musicales, pedales de efectos y sintetizadores. crecieron en tegucigalpa, honduras. su práctica abarca la lutería digital y la experimentación sonora: la música que escriben y tocan moldea lo que construyen, y lo que construyen alimenta esa música. hoy los dos viven en estados unidos: hugo en san francisco y daniel en nueva york, y colaboran en sus facetimes familiares semanales.
 </section>
 
 <!-- TODO(hugo+daniel): pick a photo or two of the two of you, drop them in assets/img/fe/, and swap the placeholder below for <img> tags. -->
