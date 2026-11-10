@@ -1,3 +1,41 @@
+# floreselectronics.com
+
+website for **flores electronics** — pedals + instruments by hugo & daniel flores garcía.
+live at <https://floreselectronics.com> via GitHub Pages (branch `main`, root `/`).
+
+this repo started 2026-11-10 as a straight clone of [hugofloresgarcia.art](https://github.com/hugofloresgarcia/hugofloresgarcia.github.io)
+(full git history included), so everything here is hugo's personal site until we reshape it.
+the two sites share the same jekyll theme (`_layouts`, `_includes`, `_sass`, `assets/css`);
+theme fixes can be cherry-picked across repos (`upstream` remote = the personal site).
+
+## run it locally
+
+```sh
+# ruby 3.1 (see .ruby-version) — e.g. `brew install rbenv && rbenv install 3.1.6`
+bundle install
+bundle exec jekyll serve --livereload     # → http://localhost:4000
+```
+
+pushing to `main` deploys the site. no build workflow needed — GitHub Pages builds jekyll itself.
+
+## where things are
+
+| what | where |
+|---|---|
+| homepage (the flower nav) | `index.md` + `_layouts/home.html` |
+| site title, url, theme options | `_config.yml` |
+| pedals page | `pedals.md`, per-pedal pages in `flores-electronics/` |
+| instruments page | `instruments.md` |
+| images, cv, downloads | `assets/` |
+| custom domain | `CNAME` (don't delete — Pages reads it) |
+
+pages the new site probably doesn't need and can be deleted: `art.md` + `art/`, `research.md`,
+`defense*.md`, `thesis.pdf`, `epk/`, `aguante-tacuazin/`, `sketches/`, `whpk-18sep26/`, `_posts/`.
+
+---
+
+## theme: no style, please! (original README below)
+
 # no style, please!
 
 <img src="https://raw.githubusercontent.com/riggraz/no-style-please/master/logo.png" width="64" align="left" />A (nearly) no-CSS, fast, minimalist [Jekyll](https://jekyllrb.com/) theme.

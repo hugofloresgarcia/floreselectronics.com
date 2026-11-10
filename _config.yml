@@ -1,7 +1,7 @@
-title: hugo flores garcía # name of the site
+title: flores electronics # name of the site
 # author: Riccardo Graziosi # name of site's author
 # email: riccardo.graziosi97@gmail.com # email of site's author
-url: https://hugofloresgarcia.art # root address of the site
+url: https://floreselectronics.com # root address of the site
 baseurl: "" # subpath of the site, e.g. "/blog" (leave it blank "" if you're site shouldn't use a subpath)
 description: > # description of the site (multiple lines allowed)
   music 🤝 computers
@@ -10,7 +10,7 @@ description: > # description of the site (multiple lines allowed)
 permalink: /:slug.html
 
 favicon: "/assets/img/favicon.ico" # name+extension of favicon (which must be put on the root folder)
-goat_counter: "hugofloresgarcia" # put your GoatCounter name if you want to use GoatCounter analytics
+# goat_counter: "hugofloresgarcia" # analytics code belongs to hugofloresgarcia.art — set up a separate GoatCounter site for this domain if wanted
 
 # link-preview (Open Graph / Twitter) image used by jekyll-seo-tag.
 # seo-tag reads the image from each page, so set it as a front-matter default.
