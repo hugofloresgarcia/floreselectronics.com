@@ -47,7 +47,7 @@ want an instrument, a pedal or a synth built for you? write to us at <a href="ma
 <section lang="es" markdown="1">
 ## contacto
 
-¿quieres que te construyamos un instrumento, un pedal o un sintetizador? escríbenos a <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>.
+¿querés que te construyamos un instrumento, un pedal o un sintetizador? escribinos a <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>.
 </section>
 
 <div class="fun-divider"></div>
