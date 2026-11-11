@@ -23,7 +23,6 @@ layout: default
     /* early-2000s drop shadow: hard offset, almost no blur, like the one under an xp window */
     box-shadow: 3px 3px 0 rgba(0,0,0,.22);
     transform: rotate(var(--tilt)) translateY(var(--lift));
-    transition: transform .1s steps(2, end);
   }
   .fe-photos figure + figure { margin-top: -1.4rem; }
   .fe-photos figure:nth-child(1) { align-self: flex-start; margin-left: 4%;  --tilt: -3deg; }
@@ -31,9 +30,10 @@ layout: default
   .fe-photos figure:nth-child(3) { align-self: flex-start; margin-left: 10%; --tilt: -1.5deg; }
   .fe-photos img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; margin: 0; max-width: none; }
   /* pick-up: the print pops to the front and bigger in two quick frames, keeping its tilt (hover on desktop, press on touch) */
-  .fe-photos figure:active { z-index: 3; transform: rotate(var(--tilt)) translateY(var(--lift)) scale(1.1); }
+  /* the transition lives on the pop state only, so letting go snaps straight back with no animation */
+  .fe-photos figure:active { z-index: 3; transform: rotate(var(--tilt)) translateY(var(--lift)) scale(1.1); transition: transform .1s steps(2, end); }
   @media (hover: hover) {
-    .fe-photos figure:hover { z-index: 3; transform: rotate(var(--tilt)) translateY(var(--lift)) scale(1.1); }
+    .fe-photos figure:hover { z-index: 3; transform: rotate(var(--tilt)) translateY(var(--lift)) scale(1.1); transition: transform .1s steps(2, end); }
   }
   @media (min-width: 720px) {
     .fe-photos { flex-direction: row; justify-content: center; align-items: flex-start; gap: 0; padding: 1rem 0 2rem; }
@@ -43,7 +43,7 @@ layout: default
     .fe-photos figure:nth-child(2) { align-self: auto; margin-right: 0; --tilt: 2deg;    --lift: -.8rem; z-index: 1; }
     .fe-photos figure:nth-child(3) { align-self: auto; margin-left: -1.2rem; --tilt: -1.5deg; --lift: .9rem; }
   }
-  @media (prefers-reduced-motion: reduce) { .fe-photos figure { transition: none; } }
+  @media (prefers-reduced-motion: reduce) { .fe-photos figure, .fe-photos figure:hover, .fe-photos figure:active { transition: none; } }
 </style>
 
 <header class="fe-header">
