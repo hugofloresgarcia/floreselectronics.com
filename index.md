@@ -49,14 +49,14 @@ want an instrument, a pedal or a synth built for you? write to us at <a href="ma
 ## the family
 
 - hugo flores garcía → [hugofloresgarcia.art](https://hugofloresgarcia.art)
-- daniel flores garcía → [github.com/dafg05](https://github.com/dafg05) <!-- TODO(daniel): swap for your own site -->
+- daniel flores garcía → [dafg05.github.io](https://dafg05.github.io/)
 </section>
 
 <section lang="es" markdown="1">
 ## la familia
 
 - hugo flores garcía → [hugofloresgarcia.art](https://hugofloresgarcia.art)
-- daniel flores garcía → [github.com/dafg05](https://github.com/dafg05)
+- daniel flores garcía → [dafg05.github.io](https://dafg05.github.io/)
 </section>
 
 <div class="fun-divider"></div>
