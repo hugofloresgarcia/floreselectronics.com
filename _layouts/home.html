@@ -12,29 +12,37 @@ layout: default
   .fe-links { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 2rem 0; }
   .fe-links a { display: block; padding: 1.2rem 1.6rem; border: thin solid black; font-size: 1.3em; text-align: center; min-width: 12rem; }
   /* three polaroids, loosely scattered. phones: a slightly overlapping stack that
-     zig-zags down the page. wider screens: a row, each print at its own tilt. */
+     zig-zags down the page. wider screens: a row, each print at its own tilt.
+     each print rests at --tilt/--lift and "snaps" there in a few jerky frames
+     (steps) instead of easing, like a low-frame-rate early-2000s animation. */
   .fe-photos { display: flex; flex-direction: column; margin: 2.5rem 0 3rem; padding: 0; overflow: hidden; }
   .fe-photos figure {
+    --tilt: 0deg; --lift: 0rem;
     margin: 0; width: 72%; max-width: 280px;
     padding: 9px 9px 30px;            /* thicker bottom edge = polaroid */
     background: #fffdf8; border: 1px solid #d9d3c0;
     /* early-2000s drop shadow: hard offset, almost no blur, like the one under an xp window */
     box-shadow: 3px 3px 0 rgba(0,0,0,.22);
-    transition: transform .25s ease;
+    transform: rotate(var(--tilt)) translateY(var(--lift));
+    transition: transform .3s steps(4, end);
   }
   .fe-photos figure + figure { margin-top: -1.4rem; }
-  .fe-photos figure:nth-child(1) { align-self: flex-start; margin-left: 4%;  transform: rotate(-3deg); }
-  .fe-photos figure:nth-child(2) { align-self: flex-end;   margin-right: 4%; transform: rotate(2.5deg); }
-  .fe-photos figure:nth-child(3) { align-self: flex-start; margin-left: 10%; transform: rotate(-1.5deg); }
+  .fe-photos figure:nth-child(1) { align-self: flex-start; margin-left: 4%;  --tilt: -3deg; }
+  .fe-photos figure:nth-child(2) { align-self: flex-end;   margin-right: 4%; --tilt: 2.5deg; }
+  .fe-photos figure:nth-child(3) { align-self: flex-start; margin-left: 10%; --tilt: -1.5deg; }
   .fe-photos img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; margin: 0; max-width: none; }
+  /* pick-up: the print jumps up and straightens in 4 hard frames (hover on desktop, press on touch) */
+  .fe-photos figure:active { z-index: 2; transform: rotate(calc(var(--tilt) * -.4)) translateY(calc(var(--lift) - .35rem)) scale(1.04); }
+  @media (hover: hover) {
+    .fe-photos figure:hover { z-index: 2; transform: rotate(calc(var(--tilt) * -.4)) translateY(calc(var(--lift) - .35rem)) scale(1.04); }
+  }
   @media (min-width: 720px) {
     .fe-photos { flex-direction: row; justify-content: center; align-items: flex-start; gap: 0; padding: 1rem 0 2rem; }
     .fe-photos figure { width: 31%; max-width: 250px; }
     .fe-photos figure + figure { margin-top: 0; margin-left: -1.2rem; }
-    .fe-photos figure:nth-child(1) { align-self: auto; margin-left: 0;  transform: rotate(-4deg) translateY(.6rem); }
-    .fe-photos figure:nth-child(2) { align-self: auto; margin-right: 0; transform: rotate(2deg)  translateY(-.8rem); z-index: 1; }
-    .fe-photos figure:nth-child(3) { align-self: auto; margin-left: -1.2rem; transform: rotate(-1.5deg) translateY(.9rem); }
-    .fe-photos figure:hover { transform: rotate(0) scale(1.03); z-index: 2; }
+    .fe-photos figure:nth-child(1) { align-self: auto; margin-left: 0;  --tilt: -4deg;   --lift: .6rem; }
+    .fe-photos figure:nth-child(2) { align-self: auto; margin-right: 0; --tilt: 2deg;    --lift: -.8rem; z-index: 1; }
+    .fe-photos figure:nth-child(3) { align-self: auto; margin-left: -1.2rem; --tilt: -1.5deg; --lift: .9rem; }
   }
   @media (prefers-reduced-motion: reduce) { .fe-photos figure { transition: none; } }
 </style>
