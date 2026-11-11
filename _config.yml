@@ -8,7 +8,7 @@ description: > # description of the site (multiple lines allowed)
 
 # landing-page taglines (the page shows one language at a time, see _layouts/home.html)
 tagline_en: "instruments 🕹️ pedals 🎛️ synths 🎹 · a family operation"
-tagline_es: "instrumentos 🕹️ pedales 🎛️ sintetizadores 🎹 · un taller familiar"
+tagline_es: "un taller familiar de<br>instrumentos : pedales : sintes"
 
 # TODO: swap for the flores electronics address once it exists (gmail or hola@floreselectronics.com via porkbun forwarding)
 contact_email: mail@hugofloresgarcia.art
