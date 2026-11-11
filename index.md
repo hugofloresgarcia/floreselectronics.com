@@ -7,7 +7,7 @@ layout: home
 <section lang="en" markdown="1">
 ## who we are
 
-flores electronics is a family operation: brothers hugo and daniel flores garcía design and build musical instruments, effects pedals and synthesizers. they grew up in tegucigalpa, honduras. their work sits between digital lutherie and play: how they make music shapes what they build, and what they build informs how they make music. today they're both based in the united states, hugo in san francisco and daniel in new york city, collaborating over facetime on weekly family calls.
+flores electronics is a family project: brothers hugo and daniel flores garcía design and build musical instruments, effects pedals and synthesizers. they grew up in tegucigalpa, honduras. their work sits between digital lutherie and play: how they make music shapes what they build, and what they build informs how they make music. today they're both based in the united states, hugo in san francisco and daniel in new york city, collaborating over facetime on weekly family calls.
 </section>
 
 <section lang="es" markdown="1">
