@@ -88,7 +88,7 @@ to see download and install instructions, [open the github page!](https://github
     <img src="assets/img/interfaces/cleat_panner.png" alt="photo of the cleat panner interface" style="width: 200px; max-width: 200px; height: auto;">
   </div>
   <div style="flex:1;" markdown="1">
-the CLEAT panner is an auto spatialization tool designed for the 16-channel CLEAT system at [elastic arts](https://cleat.info) and other spatial audio formats (quad, 8-channel, etc.). it is included as a part of text2sound4all. It is currently written in C++. we would love to make a standalone plugin for it — if this is of interest to you, please reach out!
+the CLEAT panner is an auto spatialization tool designed for the 16-channel CLEAT system at [elastic arts](https://cleat.info) and other spatial audio formats (quad, 8-channel, etc.). it is included as a part of text2sound4all. It is currently written in C++. we would love to make a standalone plugin for it. if this is of interest to you, please reach out!
 
 **onset triggers** (`o`)
 make your sound move only during transients. the onset tracker will look for sound onsets of your audio and can trigger spatial movements or path changes based on onset detection.

@@ -14,7 +14,7 @@ layout: default
   /* three polaroids, loosely scattered. phones: a slightly overlapping stack that
      zig-zags down the page. wider screens: a row, each print at its own tilt.
      the pick-up is a fast 2-frame pop (steps) instead of an ease, early-2000s style. */
-  .fe-photos { display: flex; flex-direction: column; margin: 2.5rem 0 3rem; padding: 0; overflow: hidden; }
+  .fe-photos { display: flex; flex-direction: column; margin: 2.5rem 0 3rem; padding: 0; }
   .fe-photos figure {
     --tilt: 0deg; --lift: 0rem;
     margin: 0; width: 72%; max-width: 280px;
@@ -29,12 +29,6 @@ layout: default
   .fe-photos figure:nth-child(2) { align-self: flex-end;   margin-right: 4%; --tilt: 2.5deg; }
   .fe-photos figure:nth-child(3) { align-self: flex-start; margin-left: 10%; --tilt: -1.5deg; }
   .fe-photos img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; margin: 0; max-width: none; }
-  /* pick-up: the print pops to the front and bigger in two quick frames, keeping its tilt (hover on desktop, press on touch) */
-  /* the transition lives on the pop state only, so letting go snaps straight back with no animation */
-  .fe-photos figure:active { z-index: 3; transform: rotate(var(--tilt)) translateY(var(--lift)) scale(1.1); transition: transform .1s steps(2, end); }
-  @media (hover: hover) {
-    .fe-photos figure:hover { z-index: 3; transform: rotate(var(--tilt)) translateY(var(--lift)) scale(1.1); transition: transform .1s steps(2, end); }
-  }
   @media (min-width: 720px) {
     .fe-photos { flex-direction: row; justify-content: center; align-items: flex-start; gap: 0; padding: 1rem 0 2rem; }
     .fe-photos figure { width: 31%; max-width: 250px; }
@@ -43,7 +37,12 @@ layout: default
     .fe-photos figure:nth-child(2) { align-self: auto; margin-right: 0; --tilt: 2deg;    --lift: -.8rem; z-index: 1; }
     .fe-photos figure:nth-child(3) { align-self: auto; margin-left: -1.2rem; --tilt: -1.5deg; --lift: .9rem; }
   }
-  @media (prefers-reduced-motion: reduce) { .fe-photos figure, .fe-photos figure:hover, .fe-photos figure:active { transition: none; } }
+  /* pick-up (desktop only, no animation on phones): the print pops to the front and bigger in two quick
+     frames, keeping its tilt. the transition lives on the pop state only, so letting go snaps straight back. */
+  @media (min-width: 720px) and (hover: hover) {
+    .fe-photos figure:hover { z-index: 3; transform: rotate(var(--tilt)) translateY(var(--lift)) scale(1.1); transition: transform .1s steps(2, end); }
+  }
+  @media (prefers-reduced-motion: reduce) { .fe-photos figure, .fe-photos figure:hover { transition: none; } }
 </style>
 
 <header class="fe-header">
