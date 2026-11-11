@@ -13,8 +13,7 @@ layout: default
   .fe-links a { display: block; padding: 1.2rem 1.6rem; border: thin solid black; font-size: 1.3em; text-align: center; min-width: 12rem; }
   /* three polaroids, loosely scattered. phones: a slightly overlapping stack that
      zig-zags down the page. wider screens: a row, each print at its own tilt.
-     each print rests at --tilt/--lift and "snaps" there in a few jerky frames
-     (steps) instead of easing, like a low-frame-rate early-2000s animation. */
+     the pick-up is a fast 2-frame pop (steps) instead of an ease, early-2000s style. */
   .fe-photos { display: flex; flex-direction: column; margin: 2.5rem 0 3rem; padding: 0; overflow: hidden; }
   .fe-photos figure {
     --tilt: 0deg; --lift: 0rem;
@@ -24,17 +23,17 @@ layout: default
     /* early-2000s drop shadow: hard offset, almost no blur, like the one under an xp window */
     box-shadow: 3px 3px 0 rgba(0,0,0,.22);
     transform: rotate(var(--tilt)) translateY(var(--lift));
-    transition: transform .3s steps(4, end);
+    transition: transform .1s steps(2, end);
   }
   .fe-photos figure + figure { margin-top: -1.4rem; }
   .fe-photos figure:nth-child(1) { align-self: flex-start; margin-left: 4%;  --tilt: -3deg; }
   .fe-photos figure:nth-child(2) { align-self: flex-end;   margin-right: 4%; --tilt: 2.5deg; }
   .fe-photos figure:nth-child(3) { align-self: flex-start; margin-left: 10%; --tilt: -1.5deg; }
   .fe-photos img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; margin: 0; max-width: none; }
-  /* pick-up: the print jumps up and straightens in 4 hard frames (hover on desktop, press on touch) */
-  .fe-photos figure:active { z-index: 2; transform: rotate(calc(var(--tilt) * -.4)) translateY(calc(var(--lift) - .35rem)) scale(1.04); }
+  /* pick-up: the print pops to the front and bigger in two quick frames, keeping its tilt (hover on desktop, press on touch) */
+  .fe-photos figure:active { z-index: 3; transform: rotate(var(--tilt)) translateY(var(--lift)) scale(1.1); }
   @media (hover: hover) {
-    .fe-photos figure:hover { z-index: 2; transform: rotate(calc(var(--tilt) * -.4)) translateY(calc(var(--lift) - .35rem)) scale(1.04); }
+    .fe-photos figure:hover { z-index: 3; transform: rotate(var(--tilt)) translateY(var(--lift)) scale(1.1); }
   }
   @media (min-width: 720px) {
     .fe-photos { flex-direction: row; justify-content: center; align-items: flex-start; gap: 0; padding: 1rem 0 2rem; }
