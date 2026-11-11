@@ -16,12 +16,10 @@ flores electronics is a family operation: brothers hugo and daniel flores garcí
 flores electronics es un taller familiar: los hermanos hugo y daniel flores garcía se dedican a diseñar y construir instrumentos musicales, pedales de efectos y sintetizadores. crecieron en tegucigalpa, honduras. su práctica abarca la lutería digital y la experimentación sonora: la música que escriben y tocan moldea lo que construyen, y lo que construyen alimenta esa música. hoy en día los dos viven en estados unidos: hugo en san francisco y daniel en nueva york, y colaboran por facetime en llamadas familiares semanales.
 </section>
 
-<!-- TODO(hugo+daniel): pick a photo or two of the two of you, drop them in assets/img/fe/, and swap the placeholder below for <img> tags. -->
 <div class="fe-photos">
-  <figure>
-    <div class="fe-placeholder" lang="en">photo of hugo &amp; daniel<br>(coming soon)</div>
-    <div class="fe-placeholder" lang="es">foto de hugo y daniel<br>(muy pronto)</div>
-  </figure>
+  <figure><img src="/assets/img/fe/hugo-daniel-2.jpg" alt="hugo and daniel as kids, sitting side by side on a wooden chair" loading="lazy"></figure>
+  <figure><img src="/assets/img/fe/hugo-daniel-1.jpg" alt="hugo and daniel on a city street, one giving a thumbs up" loading="lazy"></figure>
+  <figure><img src="/assets/img/fe/hugo-daniel-3.jpg" alt="hugo and daniel in a crowd at a concert" loading="lazy"></figure>
 </div>
 
 <div class="fun-divider"></div>

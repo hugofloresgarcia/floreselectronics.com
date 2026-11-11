@@ -11,11 +11,31 @@ layout: default
   html.lang-en [lang="es"], html.lang-es [lang="en"] { display: none; }
   .fe-links { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 2rem 0; }
   .fe-links a { display: block; padding: 1.2rem 1.6rem; border: thin solid black; font-size: 1.3em; text-align: center; min-width: 12rem; }
-  .fe-photos { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin: 1.5rem 0; }
-  .fe-photos figure { margin: 0; width: 100%; max-width: 320px; }
-  .fe-photos img { width: 100%; height: auto; }
-  .fe-photos figcaption { font-size: 0.8em; text-align: center; }
-  .fe-placeholder { border: thin dashed black; padding: 2.5rem 1rem; text-align: center; opacity: 0.6; }
+  /* three polaroids, loosely scattered. phones: a slightly overlapping stack that
+     zig-zags down the page. wider screens: a row, each print at its own tilt. */
+  .fe-photos { display: flex; flex-direction: column; margin: 2.5rem 0 3rem; padding: 0; overflow: hidden; }
+  .fe-photos figure {
+    margin: 0; width: 72%; max-width: 280px;
+    padding: 9px 9px 30px;            /* thicker bottom edge = polaroid */
+    background: #fffdf8; border: 1px solid #ece7d8;
+    box-shadow: 0 1px 2px rgba(0,0,0,.12), 0 6px 14px rgba(0,0,0,.10);
+    transition: transform .25s ease;
+  }
+  .fe-photos figure + figure { margin-top: -1.4rem; }
+  .fe-photos figure:nth-child(1) { align-self: flex-start; margin-left: 4%;  transform: rotate(-3deg); }
+  .fe-photos figure:nth-child(2) { align-self: flex-end;   margin-right: 4%; transform: rotate(2.5deg); }
+  .fe-photos figure:nth-child(3) { align-self: flex-start; margin-left: 10%; transform: rotate(-1.5deg); }
+  .fe-photos img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; margin: 0; max-width: none; }
+  @media (min-width: 720px) {
+    .fe-photos { flex-direction: row; justify-content: center; align-items: flex-start; gap: 0; padding: 1rem 0 2rem; }
+    .fe-photos figure { width: 31%; max-width: 250px; }
+    .fe-photos figure + figure { margin-top: 0; margin-left: -1.2rem; }
+    .fe-photos figure:nth-child(1) { align-self: auto; margin-left: 0;  transform: rotate(-4deg) translateY(.6rem); }
+    .fe-photos figure:nth-child(2) { align-self: auto; margin-right: 0; transform: rotate(2deg)  translateY(-.8rem); z-index: 1; }
+    .fe-photos figure:nth-child(3) { align-self: auto; margin-left: -1.2rem; transform: rotate(-1.5deg) translateY(.9rem); }
+    .fe-photos figure:hover { transform: rotate(0) scale(1.03); z-index: 2; }
+  }
+  @media (prefers-reduced-motion: reduce) { .fe-photos figure { transition: none; } }
 </style>
 
 <header class="fe-header">
