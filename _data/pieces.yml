@@ -1,0 +1,71 @@
+- id: cenote
+  name: cenote
+  year: 2025
+  url: /cenote
+  img: /assets/img/fe/display/cenote.jpg
+  alt: the cenote pedal, silver with hand-drawn labels, six colored knobs and four toggle switches
+  en: a frequency-shifting chorus/delay + vibrato pedal
+  es: un pedal de chorus/delay con desplazamiento de frecuencia + vibrato
+
+- id: chivo-dub
+  name: chivo dub
+  year: 2025
+  url: /chivodub
+  img: /assets/img/fe/display/chivo-dub.jpg
+  alt: the chivo dub, a silver box with goat drawings, colored knobs and three arcade buttons
+  en: a supernatural dub siren made for cabeza de chivo
+  es: una sirena dub sobrenatural hecha para cabeza de chivo
+
+- id: se-trabo-esta-mierda
+  name: se trabó esta mierda
+  year: 2025
+  url: /se-trabo-esta-mierda
+  img: /assets/img/fe/display/se-trabo-esta-mierda.jpg
+  alt: a hand turning a knob on the se trabó esta mierda pedal, its two lights glowing blue and red
+  en: a new pedal, more on it soon
+  es: un pedal nuevo, pronto más detalles
+
+- id: cloudchoir
+  name: cloudchoir
+  year: 2022
+  url: /cloudchoir
+  img: /assets/img/fe/display/cloudchoir.jpg
+  alt: hands playing the cloudchoir, a laser-cut wooden box covered in colored knobs
+  en: half theremin, half four-part choir
+  es: mitad theremín, mitad coro a cuatro voces
+
+- id: layercake
+  name: layercake
+  year: 2024
+  url: /layercake
+  img: /assets/img/fe/display/layercake.jpg
+  alt: a norns running layercake, its screen showing the layer view
+  en: a 6-layer granular sampler for norns
+  es: un sampler granular de 6 capas para norns
+
+- id: automaton
+  name: automaton
+  year: 2020
+  url: /automaton
+  img: /assets/img/fe/display/automaton.jpg
+  alt: the automaton window, pink and purple cells on a dark grid
+  en: a cellular automata sequencer built in supercollider
+  es: un secuenciador de autómatas celulares hecho en supercollider
+
+- id: pedalboard
+  name: pedalboard
+  year: 2025
+  url: /pedalboard
+  img: /assets/img/fe/display/pedalboard.jpg
+  alt: a pedalboard on a rug, with two big arcade buttons, a looper and a multi-effects unit
+  en: with a max/msp extension and arcade buttons
+  es: con extensión de max/msp y botones de arcade
+
+- id: vaca
+  name: vaca
+  year: 2025
+  url: /vaca
+  img: /assets/img/fe/display/vaca.jpg
+  alt: a laptop running the vaca max patch, half blue and half pink
+  en: the op-1's cwo effect, rebuilt in max/msp. free to download
+  es: el efecto cwo del op-1, rehecho en max/msp. descarga gratis

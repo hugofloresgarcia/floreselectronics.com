@@ -9,8 +9,34 @@ layout: default
   .lang-switch a[aria-current="true"] { font-weight: bold; text-decoration: none; }
   /* once JS picks a language, hide the other one (no JS → both languages show) */
   html.lang-en [lang="es"], html.lang-es [lang="en"] { display: none; }
-  .fe-links { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 2rem 0; }
-  .fe-links a { display: block; padding: 1.2rem 1.6rem; border: thin solid black; font-size: 1.3em; text-align: center; min-width: 12rem; }
+  /* the display: every piece is a print on the same paper as the polaroids, square-on and big.
+     two across on wider screens, one per row on phones. */
+  .fe-display:target { background: none; }
+  .fe-display h2 { margin-bottom: 1.6rem; }
+  .fe-pieces { list-style: none; margin: 0 0 1rem; padding: 0; display: grid; grid-template-columns: 1fr; gap: 2.2rem; }
+  @media (min-width: 640px) { .fe-pieces { grid-template-columns: 1fr 1fr; gap: 2.8rem 2.2rem; } }
+  .fe-pieces li { margin: 0; }
+  .fe-pieces a {
+    display: block; color: inherit; text-decoration: none;
+    padding: 10px 10px 16px;
+    background: #fffdf8; border: 1px solid #d9d3c0;
+    box-shadow: 4px 4px 0 rgba(0,0,0,.22);
+  }
+  .fe-pieces img {
+    display: block; width: 100%; max-width: none; height: auto; margin: 0;
+    aspect-ratio: 4 / 5; object-fit: cover; background: #ece6d6;
+  }
+  .fe-piece-plate { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-top: .8rem; }
+  .fe-piece-name { font-size: 1.25em; font-weight: bold; }
+  .fe-piece-year { color: #6b6455; }
+  .fe-piece-hook { display: block; margin-top: .3rem; color: #3d382e; }
+  /* like an early-2000s button: lifts toward you on hover, presses in on click. two hard frames, no easing. */
+  .fe-pieces a:hover, .fe-pieces a:focus-visible { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 rgba(0,0,0,.3); transition: transform .08s steps(2, end), box-shadow .08s steps(2, end); }
+  .fe-pieces a:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 rgba(0,0,0,.3); transition: none; }
+  .fe-pieces a:hover .fe-piece-name { text-decoration: underline; }
+  .fe-pieces a:focus-visible { outline: 2px dashed black; outline-offset: 4px; }
+  .fe-pieces li:target > a { background: #fff6b8; }
+  @media (prefers-reduced-motion: reduce) { .fe-pieces a, .fe-pieces a:hover, .fe-pieces a:active { transition: none; transform: none; } }
   /* three polaroids, loosely scattered. phones: a slightly overlapping stack that
      zig-zags down the page. wider screens: a row, each print at its own tilt.
      the pick-up is a fast 2-frame pop (steps) instead of an ease, early-2000s style. */

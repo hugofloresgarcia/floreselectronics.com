@@ -2,11 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="refresh" content="0; url=/instruments" />
-  <link rel="canonical" href="/instruments" />
-  <title>moved to /instruments</title>
+  <meta http-equiv="refresh" content="1; url=/#pieces" />
+  <link rel="canonical" href="https://floreselectronics.com/" />
+  <title>moved to floreselectronics.com</title>
+  <script>
+    (function () {
+      var h = location.hash;
+      var archive = { "#text2sound4all": 1, "#unsound-objects": 1 };
+      location.replace(archive[h] ? "https://hugofloresgarcia.art/instruments" + h : "/" + (h || "#pieces"));
+    })();
+  </script>
 </head>
 <body>
-  <p>this page is now <a href="/instruments">/instruments</a>. redirecting…</p>
+  <p>everything we've built is now on the <a href="/#pieces">front page</a>. redirecting…</p>
 </body>
 </html>

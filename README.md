@@ -22,10 +22,11 @@ pushing to `main` deploys the site via `.github/workflows/pages.yml` (jekyll bui
 
 | what | where |
 |---|---|
-| landing page (bio · instruments/pedals links · contact · family links; en/es toggle) | `index.md` + `_layouts/home.html` |
+| landing page (bio · photos · the eight pieces on display · contact · family links; en/es toggle) | `index.md` + `_layouts/home.html` |
+| the pieces on display (name, year, photo, en/es one-liners, order) | `_data/pieces.yml` → `_includes/pieces.html`; photos in `assets/img/fe/display/` |
 | site title, taglines (en/es), contact email, theme options | `_config.yml` |
-| pedals page | `pedals.md`; per-pedal pages `cenote.md`, `se-trabo-esta-mierda.md`, `chivodub.md` |
-| instruments page | `instruments.md` |
+| one page per piece | `cenote.md`, `chivodub.md`, `se-trabo-esta-mierda.md`, `cloudchoir.md`, `layercake.md`, `automaton.md`, `pedalboard.md`, `vaca.md` |
+| old `/instruments`, `/pedals`, `/interfaces` urls | `instruments.html`, `pedals.html`, `interfaces.html` redirect to the display on the landing page; everything else from those pages lives at hugofloresgarcia.art/instruments + /pedals |
 | images, cv, downloads | `assets/` |
 | custom domain | `CNAME` (don't delete — Pages reads it) |
 

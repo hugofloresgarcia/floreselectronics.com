@@ -24,10 +24,7 @@ flores electronics es un taller familiar: los hermanos hugo y daniel flores garc
 
 <div class="fun-divider"></div>
 
-<nav class="fe-links">
-  <a href="/instruments"><span lang="en">instruments 🕹️</span><span lang="es">instrumentos 🕹️</span></a>
-  <a href="/pedals"><span lang="en">pedals 🎛️</span><span lang="es">pedales 🎛️</span></a>
-</nav>
+{% include pieces.html %}
 
 <div class="fun-divider"></div>
 

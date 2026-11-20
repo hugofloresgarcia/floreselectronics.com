@@ -1,0 +1,16 @@
+<section class="fe-display" id="pieces">
+  <h2 lang="en">catalog</h2>
+  <h2 lang="es">catálogo</h2>
+  <ul class="fe-pieces">
+  {%- for p in site.data.pieces %}
+    <li id="{{ p.id }}">
+      <a href="{{ p.url | relative_url }}">
+        <img src="{{ p.img | relative_url }}" alt="{{ p.alt }}" width="800" height="1000" loading="lazy">
+        <span class="fe-piece-plate"><span class="fe-piece-name">{{ p.name }}</span> <span class="fe-piece-year">{{ p.year }}</span></span>
+        <span class="fe-piece-hook" lang="en">{{ p.en }}</span>
+        <span class="fe-piece-hook" lang="es">{{ p.es }}</span>
+      </a>
+    </li>
+  {%- endfor %}
+  </ul>
+</section>
